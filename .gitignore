@@ -6,3 +6,4 @@
 
 #Ignore virtual env
 .venv/
+__pycache__
