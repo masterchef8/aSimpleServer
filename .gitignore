@@ -1,0 +1,8 @@
+#Ignore file from MacOS
+.DS_Store
+
+#Igore folder from PyCharm
+.idea/
+
+#Ignore virtual env
+.venv/
