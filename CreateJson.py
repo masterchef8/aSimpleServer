@@ -1,30 +1,49 @@
 import json
-from pathlib import Path
 import os
 
-class CreateJson ():
-	"""docstring for CreateJson """
-	def __init__(self, list : str[]):
-		self.list = list
-		
 
-	def createDict(self):
-		cwd = os.getcwd()
-		data = {}
-		for i in range(len(self.list):
-			filename, file_extension = os.path.splitext(str(cwd+'/'+self.list[i]))
-			if(file_extension == ".txt"):
-				data[self.list[i]] = {"name": filename ,"extension": file_extension, "path" : str(cwd+'/'+filename), "type": "text"}
+class CreateJson:
+    """docstring for CreateJson """
 
-			else if (file_extension == ".png" or file_extension == ".jpg" or file_extension == "jpeg" or file_extension == ".gif"):
-				data[self.list[i]] = {"name": filename ,"extension": file_extension, "path" : str(cwd+'/'+filename), "type": "picture"}
+    def __init__(self, path=os.getcwd()):
+        self.path = path
+        if self.path == os.getcwd():
 
-			else if (file_extension == ".mp4" or file_extension == ".mov" or file_extension == ".avi"):
-				data[self.list[i]] = {"name": filename ,"extension": file_extension, "path" : str(cwd+'/'+filename), "type": "video"}
+            self.path = os.getcwd()+'/data'
+            self.list = os.listdir(self.path)
+        else:
+            self.list = os.listdir(self.path)
 
-		json_file = json.dumps(data)
-		print(json_file)
-		return json_file
+    @property
+    def createDict(self):
+
+        data = {}
+        for i in range(len(self.list)):
+            filename, file_extension = os.path.splitext(str(self.path + '/' + self.list[i]))
+            if data == {}:
+                data['txt'] = {}
+                data['img'] = {}
+                data['video'] = {}
+
+            if file_extension == ".txt":
+
+                data['txt'][self.list[i]] = {"name": filename, "extension": file_extension,
+                                      "path": str(self.path + '/' + filename), "type": "text"}
+
+            elif file_extension == ".png" or file_extension == ".jpg" or file_extension == "jpeg" or \
+                    file_extension == ".gif":
+
+                data['img'][self.list[i]] = {"name": filename, "extension": file_extension,
+                                      "path": str(self.path + '/' + filename), "type": "picture"}
+
+            elif file_extension == ".mp4" or file_extension == ".mov" or file_extension == ".avi":
+                data['video'][self.list[i]] = {"name": filename, "extension": file_extension,
+                                      "path": str(self.path + '/' + filename), "type": "video"}
+
+        json_file = json.dumps(data)
+        print(json_file)
+        return json_file
+
 
 """
 JSON{
@@ -65,3 +84,4 @@ JSON{
   }
 }
 }
+"""
