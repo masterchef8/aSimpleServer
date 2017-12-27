@@ -2,7 +2,7 @@
 .DS_Store
 
 #Igore folder from PyCharm
-.idea/
+idea/
 
 #Ignore virtual env
 venv/
