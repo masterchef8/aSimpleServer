@@ -7,25 +7,4 @@ Three types of files are supported:
 - Images (.png .jpg .jpeg .gif)
 - Video (.mp4 .mov .avi)
 
-{
-"txt": {}, 
-"img": 
-    {
-        "40-seignosse-aire-etape-camping-car-park-nouvelle-aquitaine.jpg": {
-            "name": "40-seignosse-aire-etape-camping-car-park-nouvelle-aquitaine", 
-            "extension": ".jpg", 
-            "path": "data/40-seignosse-aire-etape-camping-car-park-nouvelle-aquitaine", 
-            "type": "picture"}, 
-        "maxresdefault.jpg": {
-            "name": "maxresdefault", 
-            "extension": ".jpg", 
-            "path": "data/maxresdefault", 
-            "type": "picture"}, 
-        "plage.png": {
-            "name": "plage", 
-            "extension": ".png", 
-            "path": "data/plage", 
-            "type": "picture"}
-        }, 
-"video": {}
-}
+{"txt": {}, "img": {"40-seignosse-aire-etape-camping-car-park-nouvelle-aquitaine.jpg": {"name": "40-seignosse-aire-etape-camping-car-park-nouvelle-aquitaine.jpg", "extension": ".jpg", "path": "/Users/somebody/git/aSimpleServer/data//Users/somebody/git/aSimpleServer/data/40-seignosse-aire-etape-camping-car-park-nouvelle-aquitaine", "type": "picture"}, "maxresdefault.jpg": {"name": "maxresdefault.jpg", "extension": ".jpg", "path": "/Users/somebody/git/aSimpleServer/data//Users/somebody/git/aSimpleServer/data/maxresdefault", "type": "picture"}, "plage.png": {"name": "plage.png", "extension": ".png", "path": "/Users/somebody/git/aSimpleServer/data//Users/somebody/git/aSimpleServer/data/plage", "type": "picture"}}, "video": {}}
